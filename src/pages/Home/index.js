@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const Home = () => {
@@ -9,6 +10,9 @@ const Home = () => {
         Body mass index (BMI) is a value derived from the mass (weight) and height of a person.
         The BMI is defined as the body mass divided by the square of the body height
       </p>
+      <Link className="home__useButton" to="/tictactoe">
+        Click me to measure your BMI
+      </Link>
     </main>
   );
 };
