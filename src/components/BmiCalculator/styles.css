@@ -1,13 +1,7 @@
-footer {
-  width: 100%;
-  height: 60px;
-  background-color: #5a5a5a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.bmiCalculator__main {
+  height: 50%;
 }
 
-.footer_p {
-  color: #fff;
-  font-size: 14px;
+.bmiCalculator__title {
+  margin-top: 180px;
 }

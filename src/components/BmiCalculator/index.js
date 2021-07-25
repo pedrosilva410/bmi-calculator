@@ -7,15 +7,24 @@ const BmiCalculator = () => {
   const [height, setHeight] = useState("")
   const [weight, setWeight] = useState("")
   const [bmi, setBmi] = useState("")
+  const [btnName, setBtnName] = useState("calculate")
 
   let handleClick = () => {
-    setBmi("your bmi is: " + weight/((height/100)*(height/100)))
+    if(btnName==="calculate" && height!=="" && height!=="0" && weight!=="" && weight!=="0"){
+      setBmi("your bmi is: " + Math.round(weight/((height/100)*(height/100))));
+      setBtnName("reset")
+    } else{
+      setHeight("")
+      setWeight("")
+      setBmi("")
+      setBtnName("calculate")
+    }
   }
 
 
   return (
-    <main>
-      <h1>BMI Calculator</h1>
+    <div className="bmiCalculator__main">
+      <h1 className="bmiCalculator__title">BMI Calculator</h1>
 
       <p className="bmi__p">
         insert your data
@@ -53,10 +62,10 @@ const BmiCalculator = () => {
 
       </div>
 
-      <button onClick={handleClick}>calculate</button>
+      <button onClick={handleClick}>{btnName}</button>
 
       <p>{bmi}</p>
-    </main>
+    </div>
   );
 };
 
