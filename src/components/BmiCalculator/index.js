@@ -6,9 +6,10 @@ const BmiCalculator = () => {
 
   const [height, setHeight] = useState("")
   const [weight, setWeight] = useState("")
+  const [bmi, setBmi] = useState("")
 
   let handleClick = () => {
-    console.log(weight/((height/100)*(height/100)))
+    setBmi("your bmi is: " + weight/((height/100)*(height/100)))
   }
 
 
@@ -53,6 +54,8 @@ const BmiCalculator = () => {
       </div>
 
       <button onClick={handleClick}>calculate</button>
+
+      <p>{bmi}</p>
     </main>
   );
 };
