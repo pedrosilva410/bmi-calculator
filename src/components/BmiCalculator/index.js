@@ -37,7 +37,7 @@ const BmiCalculator = () => {
               setHeight(event.target.value);
             }}
             value={height}
-            className="bmi__height"
+            className="bmi__input"
             type="text"
             placeholder="170"
         />
@@ -53,7 +53,7 @@ const BmiCalculator = () => {
             setWeight(event.target.value);
           }}
           value={weight}
-          className="bmi__weight"
+          className="bmi__input"
           type="text"
           placeholder="70"
         />
@@ -62,9 +62,9 @@ const BmiCalculator = () => {
 
       </div>
 
-      <button onClick={handleClick}>{btnName}</button>
+      <button className="BmiCalculator__btn" onClick={handleClick}>{btnName}</button>
 
-      <p>{bmi}</p>
+      <p className="BmiCalculator__bmi">{bmi}</p>
     </div>
   );
 };
