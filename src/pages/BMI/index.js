@@ -7,7 +7,7 @@ const BMI = () => {
   return (
     <main>
       <BmiCalculator/>
-      <img className="BMI__img" src={BmiImg}/>
+      <img alt="bmi chart" className="BMI__img" src={BmiImg}/>
     </main>
   );
 };
