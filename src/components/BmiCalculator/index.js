@@ -38,7 +38,7 @@ const BmiCalculator = () => {
             }}
             value={height}
             className="bmi__input"
-            type="text"
+            type="number"
             placeholder="170"
         />
 
@@ -54,7 +54,7 @@ const BmiCalculator = () => {
           }}
           value={weight}
           className="bmi__input"
-          type="text"
+          type="number"
           placeholder="70"
         />
 
